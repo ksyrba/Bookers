@@ -10,20 +10,18 @@
   </head>
 
   <body>
-    <p id="notice"></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @book.body %>
-</p>
-
-<a class="edit_56570" href="/books/56570/edit">Edit</a> |
-<a class="back" href="/books">Back</a>
-
-  </body>
-</html>
+    <p>
+      <strong>Title:</strong>
+      <%= @book.title %>
+    </p>
+    
+    <p>
+      <strong>Body:</strong>
+      <%= @book.body %>
+    </p>
+    
+    <%= link_to "Edit", edit_book_path(@book.id) %>
+    <%= link_to "Back", books_path %>
+    
+      </body>
+    </html>
